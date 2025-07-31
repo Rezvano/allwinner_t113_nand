@@ -1,0 +1,22 @@
+diff --git a/arch/arm32/sunxi/sunxi_spi.c b/arch/arm32/sunxi/sunxi_spi.c
+index 8a15d0c..bbcb3c3 100644
+--- a/arch/arm32/sunxi/sunxi_spi.c
++++ b/arch/arm32/sunxi/sunxi_spi.c
+@@ -149,6 +149,7 @@ typedef enum {
+ 	SPI_NAND_MFR_MACRONIX	= 0xc2,
+ 	SPI_NAND_MFR_MICRON		= 0x2c,
+ 	SPI_NAND_MFR_FORESEE	= 0xcd,
++	SPI_NAND_MFR_ZETTA  	= 0xba,
+ } spi_mfr_id;
+ 
+ static const spi_nand_info_t spi_nand_infos[] = {
+@@ -196,6 +197,9 @@ static const spi_nand_info_t spi_nand_infos[] = {
+ 
+  /* FORESEE */
+ 	{	 "FS35SQA001G",	{.mfr = SPI_NAND_MFR_FORESEE, .dev = 0x7171, 2}, 2048,  64, 64, 1024, 1, 1, SPI_IO_QUAD_RX},
++
++ /*ZETTA*/
++    {	 "ZD35Q1GC-IB",	{.mfr = SPI_NAND_MFR_ZETTA, .dev = 0x71, 1}, 2048,  64, 64, 1024, 1, 1, SPI_IO_QUAD_IO},	
+ };
+ 
+ sunxi_spi_t		*spip;
