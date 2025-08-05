@@ -4,6 +4,3 @@
 [submodule "xfel"]
 	path = xfel
 	url = https://github.com/Rezvano/xfel
-[submodule "linux"]
-	path = linux
-	url = https://github.com/torvalds/linux
